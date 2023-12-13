@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <!-- Inclure Bootstrap 4 CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <!-- Entête -->
+    <div class="header">
+        <img src="images/logo.png" alt="Logo FOKAL" class="logo">
+        <ul class="menu">
+            <li><a href="#">.Informations personnelles</a></li>
+            <li><a href="#">.Mes Fichiers</a></li>
+            <li><a href="#">.Matériel</a></li>
+            <li><a href="#" id="changePassword">.Changer mot de passe</a></li>
+        </ul>
+        <div class="profile-image-container">
+            <img src="images/image1.jpg" alt="profile-image" class="profile-image" id="profile-image">
+            <div class="popup" id="popup">
+                <a href="login.html">Déconnexion</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Formulaire à afficher lors du clic sur le lien "Changer le mot de passe"-->
+    <div id="modifierMotDePasseContainer" class="hidden">
+        <form id="modifierMotDePasseForm">
+          <div class="form-group">
+            <label for="motDepasseActuel">Saisissez votre mot de passe actuel:</label>
+            <input type="password" class="form-control" id="motDepasseActuel" name="motDepasseActuel" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="nouveauMotDePasse">Saisissez votre nouveau mot de passe:</label>
+            <input type="password" class="form-control" id="nouveauMotDePasse" name="nouveauMotDePasse" required>
+          </div>
+
+          <div class="form-group">
+            <label for="nouveauMotDePasseConfirmation">Confirmez votre nouveau mot de passe:</label>
+            <input type="password" class="form-control" id="nouveauMotDePasseConfirmation" name="nouveauMotDePasseConfirmation" required>
+          </div>
+      
+          <div class="text-center">
+            <button type="submit" class="btn btn-outline-warning btn-sm">Changer le mot de passe</button>
+          </div>
+        </form>
+    </div>
+
+    <div class="containerProfilPage">
+        
+
+        <div class="section-box">
+            <section class="sec1">
+                <h2 class="section-title">Informations personnelles</h2>
+                <div class="info-container">
+                    <div class="text-content">
+                        
+                        <table class="tableProfilPage" id="infoPersonnelleTable">
+                            <tr>
+                                <td style="font-weight: bold;">Nom:</td>
+                                <td>John</td>
+                                
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;">Prénom:</td>
+                                <td>Elise</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;">NIF:</td>
+                                <td>123456789</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;">Numéro de téléphone:</td>
+                                <td>+5093123-4567</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;">Sexe:</td>
+                                <td>Masculin</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;">Adresse 1:</td>
+                                <td>123 Rue de la Ville</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;">Adresse 2:</td>
+                                <td>Appartement 456,Av. John Brown</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;">Email:</td>
+                                <td>john.elise@email.com</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;">État matrimonial:</td>
+                                <td>Marié</td>
+                            </tr>
+                        </table>
+                        <div>
+                            <button type="button" class="btn btn-warning btn-sm modifierSec1">Modifier</button>
+                        </div>
+                    </div>
+                    <div class="image-content">
+                        <img src="images/image6.jpg" alt="Image de la section Info">
+                    </div>
+                
+            </section>
+        </div>
+        
+    
+        <div class="section-box">
+            <section class="sec2">
+                <h2 class="section-title">Dépendants</h2>
+                <div class="text-center">
+                    <button type="button" class="btn btn-outline-warning" id="ajouterDependant">Ajouter un(e) dépendant(e)</button>
+                </div>
+                <hr/>
+                
+
+                <div id="formContainer" class="hidden">
+                    <form id="dependantForm">
+                      <div class="form-group">
+                        <label for="nomDependant">Nom :</label>
+                        <input type="text" class="form-control" id="nomDependant" name="nomDependant" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="prenomDependant">Prénom :</label>
+                        <input type="text" class="form-control" id="prenomDependant" name="prenomDependant" required>
+                      </div>
+              
+                      <div class="form-group">
+                        <label for="dateNaissanceDependant">Date de naissance :</label>
+                        <input type="date" class="form-control" id="dateNaissanceDependant" name="dateNaissanceDependant" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="lienParenteDependant">Lien de parenté:</label>
+                        <input type="text" class="form-control" id="lienParenteDependant" name="lienParenteDependant" required>
+                      </div>
+              
+                      <div class="form-group">
+                        <label for="numeroTelDependant">Numéro de téléphone :</label>
+                        <input type="tel" class="form-control" id="numeroTelDependant" name="numeroTelDependant" required>
+                      </div>
+              
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-outline-warning btn-sm">Ajouter</button>
+                      </div>
+                    </form>
+                </div>
+                
+                <div class="dependant">
+                    <table class="tableProfilPage">
+                        <tr>
+                            <td style="font-weight: bold;">Nom:</td>
+                            <td>Jannette</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Prénom:</td>
+                            <td>Elise</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Date de naissance:</td>
+                            <td>20/03/2003</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Lien de parenté:</td>
+                            <td>Enfant</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Numéro de téléphone:</td>
+                            <td>(+509) 45678900</td>
+                        </tr>
+                    </table>
+                    <div class="btnSec2">
+                        <button type="button" class="btn btn-warning btn-sm modifierDependant">Modifier</button>
+                        <button type="button" class="btn btn-danger btn-sm supprimerDependant">Supprimer</button>
+                    </div>
+                    <hr/>
+                </div>
+                <div class="dependant">
+                    <table class="tableProfilPage">
+                        <tr>
+                            <td style="font-weight: bold;">Nom:</td>
+                            <td>Jiles</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Prénom:</td>
+                            <td>Elise</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Date de naissance:</td>
+                            <td>01/06/1990</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Lien de parenté:</td>
+                            <td>Femme</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Numéro de téléphone:</td>
+                            <td>(+509) 35643212</td>
+                        </tr>
+                    </table>
+                    <div class="btnSec2">
+                        <button type="button" class="btn btn-warning btn-sm modifierDependant">Modifier</button>
+                        <button type="button" class="btn btn-danger btn-sm supprimerDependant">Supprimer</button>
+                        
+                    </div>
+                    <hr/>
+                </div>
+                <div class="dependant">
+                    <table class="tableProfilPage">
+                        <tr>
+                            <td style="font-weight: bold;">Nom:</td>
+                            <td>Isabelle</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Prénom:</td>
+                            <td>Elise</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Date de naissance:</td>
+                            <td>08/08/1967</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Lien de parenté:</td>
+                            <td>Mère</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Numéro de téléphone:</td>
+                            <td>(+509) 34567898</td>
+                        </tr>
+                    </table>
+                    <div class="btnSec2">
+                        <button type="button" class="btn btn-warning btn-sm modifierDependant">Modifier</button>
+                        <button type="button" class="btn btn-danger btn-sm supprimerDependant">Supprimer</button>
+                        
+                    </div>
+                </div>
+
+                <!--Formulaire à afficher lors du clic sur un bouton "Modifier" de la section "Dépendant"-->
+                <div id="modifierDependantContainer" class="hidden">
+                    <form id="modifierDependantFormulaire">
+                        <div class="form-group">
+                            <label for="nom">Nom :</label>
+                            <input type="text" class="form-control" id="nom" name="nom" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prenom">Prénom :</label>
+                            <input type="text" class="form-control" id="prenom" name="prenom" required>
+                        </div>
+          
+                        <div class="form-group">
+                            <label for="dateNaissance">Date de naissance :</label>
+                            <input type="date" class="form-control" id="dateNaissance" name="dateNaissance" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lienParente">Lien de parenté:</label>
+                            <input type="text" class="form-control" id="lienParente" name="lienParente" required>
+                        </div>
+          
+                        <div class="form-group">
+                            <label for="numeroTel">Numéro de téléphone :</label>
+                            <input type="tel" class="form-control" id="numeroTel" name="numeroTel" required>
+                        </div>
+          
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-outline-warning btn-sm">Modifier</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!--Popup à afficher lors d'un clic sur un bouton "Supprimer" de la section Dependant-->
+                <div class="popupSuppressionDependant" id="popupSuppressionDependant">
+                    <p>Voulez-vous vraiment supprimer ce/cette dépendant(e)?</p>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-danger btn-sm">OUI</button>
+                        <button type="submit" class="btn btn-outline-warning btn-sm">NON</button>
+                    </div>
+
+                </div>
+            </section>
+
+                
+        </div>
+    
+        
+        <div class="section-box">
+            <section class="sec4">
+                <h2 class="section-title">Informations Bancaires</h2>
+                <table class="tableProfilPage">
+                    <tr>
+                        <td style="font-weight: bold;">Nom de la banque:</td>
+                        <td>BNC</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">Numéro du compte:</td>
+                        <td>000-234-78-90</td>
+                    </tr>
+                </table>
+                <div>
+                    <button type="button" class="btn btn-warning btn-sm" id="modifierSec4">Modifier</button>
+
+                    <!--Formulaire à afficher lors d'un clic sur le bouton "Supprimer" de la section "Informations bancaires"-->
+                    <div id="sec4FormContainer" class="hidden">
+                        <form id="sec4Form">
+                          <div class="form-group">
+                            <label for="nomBanque">Nom de la banque :</label>
+                            <input type="text" class="form-control" id="nomBanque" name="nomBanque" required>
+                          </div>
+                      
+                          <div class="form-group">
+                            <label for="numeroCompte">Numéro du compte :</label>
+                            <input type="text" class="form-control" id="numeroCompte" name="numeroCompte" required>
+                          </div>
+                      
+                          <div class="text-center">
+                            <button type="submit" class="btn btn-outline-warning btn-sm">Modifier</button>
+                          </div>
+                        </form>
+                    </div>
+                      
+                </div>
+            </section>
+        </div>
+        <div class="section-box">
+            <section class="sec3">
+                <h2 class="section-title">Informations sur le poste</h2>
+                <table class="tableProfilPage">
+                    <tr>
+                        <td style="font-weight: bold;">Intitulé de poste:</td>
+                        <td>Directeur</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">Département:</td>
+                        <td>Vente</td>
+                    </tr>
+                </table>
+    
+                <div>
+                    
+                </div>
+            </section>
+        </div>
+    </div>
+
+    
+    
+
+    
+    <footer>
+        <div class="containerFooter">
+            <div class="text-center">
+                <p>Copyright © 2023 FOKAL. | Design by: <a href="mailto:informatique@fokal.org">informatique@fokal.org</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!--Inclure Bootstrap 4 et JavaScript-->
+    <!--Ce lien popper JS est mieux que le 2eme en commentaire(génère des erreurs de chargement à la console)-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+
+        //Gestion de l'événement sur la photo de profil:
+        var profileImage = document.getElementById("profile-image");
+        var popup = document.getElementById("popup");
+    
+        profileImage.addEventListener("mouseover", function() {
+          popup.style.display = "block";
+        });
+    
+        profileImage.addEventListener("click", function() {
+          popup.style.display = "block";
+        });
+    
+        popup.addEventListener("click", function(event) {
+          event.stopPropagation();
+          popup.style.display = "none";
+        });
+    
+        document.addEventListener("click", function() {
+          popup.style.display = "none";
+        });
+
+        //Ajouter un nouveau dependant:
+        var ajouterDependantBtn = document.getElementById("ajouterDependant");
+        var formContainer = document.getElementById("formContainer");
+
+        //Gestionnaire d'événement de clic au bouton
+        ajouterDependantBtn.addEventListener("click", function() {
+            formContainer.style.display = "block";
+        });
+
+        
+
+        // Ajoutez un gestionnaire d'événement de clic au document pour masquer le formulaire quand on clic au dehors
+        document.addEventListener("click", function(event) {
+                if (!dependantForm.contains(event.target) && event.target !== ajouterDependantBtn) {
+                  formContainer.style.display = "none";
+                }
+        });
+
+        //Modifier infos bancaires:
+        var modifierSec4Btn = document.getElementById("modifierSec4");
+        var sec4FormContainer = document.getElementById("sec4FormContainer");
+
+        modifierSec4Btn.addEventListener("click", function() {
+            sec4FormContainer.style.display = "block";
+            
+        });
+
+        
+        document.addEventListener("click", function(event) {
+            if (!sec4FormContainer.contains(event.target) && event.target !== modifierSec4Btn) {
+                sec4FormContainer.style.display = "none";
+        }
+        });
+
+
+        //Modifier un dependant:
+        var modifierDependantBtns = document.getElementsByClassName("modifierDependant"); //renvoit une liste
+        var modifierDependantContainer = document.getElementById("modifierDependantContainer");
+
+        //Boucle permettant de récupérer chaque bouton avec la classe en question dans la liste renvoyée
+	    for (var i = 0; i < modifierDependantBtns.length; i++) {
+
+    		var modifierDependantBtn = modifierDependantBtns[i];
+
+		    //Gestionnaire d'événement de clic sur chaque bouton
+        	modifierDependantBtn.addEventListener("click", function() {
+                event.stopPropagation();
+            	modifierDependantContainer.style.display = "block";
+                //console.log("Code JavaScript chargé");
+        	});
+    		
+	    }
+
+ 
+        //Gestionnaire d'événement de clic au document pour cacher le formulaire lors d'un clic à l'extérieur
+        document.addEventListener("click", function(event) {
+            if (event.target !== modifierDependantContainer && !modifierDependantContainer.contains(event.target)) {
+                modifierDependantContainer.style.display = "none";
+                
+            }
+        });
+
+        
+
+        //Supprimer un dépendant:
+
+        var supprimerDependantBtns = document.getElementsByClassName("supprimerDependant"); 
+        var popupSuppressionDependant = document.getElementById("popupSuppressionDependant");
+
+        for (var i = 0; i < supprimerDependantBtns.length; i++) {
+
+            var supprimerDependantBtn = supprimerDependantBtns[i];
+
+            // Ajouter un gestionnaire d'événement de clic sur chaque bouton
+            supprimerDependantBtn.addEventListener("click", function() {
+                event.stopPropagation();
+                popupSuppressionDependant.style.display = "block";
+                //console.log("Code JavaScript chargé");
+            });
+
+        }
+
+
+        //Gestionnaire d'événement de clic au document pour cacher le formulaire lors d'un clic à l'extérieur
+        document.addEventListener("click", function(event) {
+            if (event.target !== popupSuppressionDependant && !popupSuppressionDependant.contains(event.target)) {
+                popupSuppressionDependant.style.display = "none";
+                
+            }
+        });
+
+        
+
+        //Modifier Mot de passe:
+
+        var changePassword = document.getElementById("changePassword");
+        var modifierMotDePasseContainer = document.getElementById("modifierMotDePasseContainer");
+
+        changePassword.addEventListener("click",function(){
+            
+            event.stopPropagation();
+            event.preventDefault();
+            modifierMotDePasseContainer.style.display = "block";
+
+        });
+
+        document.addEventListener("click",function(event){
+            if(event.target !==modifierMotDePasseContainer && !modifierMotDePasseContainer.contains(event.target)){
+            
+                modifierMotDePasseContainer.style.display="none";
+            }
+
+        });
+
+        
+
+
+
+
+
+        
+
+        
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

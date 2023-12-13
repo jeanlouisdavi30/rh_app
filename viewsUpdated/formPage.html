@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire-InfosPersonnelles</title>
+    <!-- Inclure Bootstrap 4 CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+   <!-- Entête -->
+   <div class="header">
+    <img src="images/logo.png" alt="Logo FOKAL" class="logo">
+    <ul class="menu">
+        <li><a href="#">.Informations personnelles</a></li>
+        <li><a href="#">.Mes Fichiers</a></li>
+        <li><a href="#">.Matériel</a></li>
+        <li><a href="#" id="changePassword">.Changer mot de passe</a></li>
+    </ul>
+    <div class="profile-image-container">
+        <img src="images/image1.jpg" alt="profile-image" class="profile-image" id="profile-image">
+        <div class="popup" id="popup">
+            <a href="login.html">Déconnexion</a>
+        </div>
+    </div>
+</div>
+
+    <!--Formulaire à afficher lors du clic sur le lien "Changer le mot de passe"-->
+    <div id="modifierMotDePassecontainer" class="hidden">
+        <form id="modifierMotDePasseForm">
+          <div class="form-group">
+            <label for="motDepasseActuel">Saisissez votre mot de passe actuel:</label>
+            <input type="password" class="form-control" id="motDepasseActuel" name="motDepasseActuel" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="nouveauMotDePasse">Saisissez votre nouveau mot de passe:</label>
+            <input type="password" class="form-control" id="nouveauMotDePasse" name="nouveauMotDePasse" required>
+          </div>
+
+          <div class="form-group">
+            <label for="nouveauMotDePasseConfirmation">Confirmez votre nouveau mot de passe:</label>
+            <input type="password" class="form-control" id="nouveauMotDePasseConfirmation" name="nouveauMotDePasseConfirmation" required>
+          </div>
+      
+          <div class="text-center">
+            <button type="submit" class="btn btn-outline-warning btn-sm">Changer le mot de passe</button>
+          </div>
+        </form>
+    </div>
+
+    <div class="containerFormPage">
+            <h3  class="formulaireTitle">Informations personnelles</h3>
+
+        
+        <form>
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" id="nom">
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" class="form-control" id="prenom">
+            </div>
+            <div class="form-group">
+                <label for="nif">NIF</label>
+                <input type="text" class="form-control" id="nif">
+            </div>
+            <div class="form-group">
+                <label for="telephone">Numéro de téléphone</label>
+                <input type="tel" class="form-control" id="telephone">
+            </div>
+            <div class="form-group">
+                <label for="sexe">Sexe</label>
+                <select class="form-control" id="sexe">
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="adresse1">Adresse 1</label>
+                <input type="text" class="form-control" id="adresse1">
+            </div>
+            <div class="form-group">
+                <label for="adresse2">Adresse 2</label>
+                <input type="text" class="form-control" id="adresse2">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="etatMatrimonial">État matrimonial</label>
+                <select class="form-control" id="etatMatrimonial">
+                    <option>Célibataire</option>
+                    <option>Marié(e)</option>
+                    <option>Divorcé(e)</option>
+                    <option>Veuve/Veuf</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="photoProfil">Upload image...</label>
+                <input type="file" class="form-control-file" id="photoProfil" accept="image/*" onchange="previewImage(this)">
+                <!-- Prévisualisation de l'image -->
+                <img id="imagePreview" src="#" alt="Prévisualisation de l'image" style="display: none;">
+            </div>
+
+           <div class="text-center">
+            <button type="submit" class="btn btn-warning">Enregistrer</button>
+           </div>
+        </form>
+
+
+    </div>
+
+    <footer>
+        <div class="containerFooter">
+            <div class="text-center">
+                <p>Copyright © 2023 FOKAL. | Design by: <a href="mailto:informatique@fokal.org">informatique@fokal.org</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!--Inclure Bootstrap 4 et JavaScript-->
+    <!--Ce lien popper JS est mieux que le 2eme en commentaire(génère des erreurs de chargement à la console)-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+        //Image preview
+        function previewImage(input) {
+            var imagePreview = document.getElementById('imagePreview');
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    imagePreview.style.display = 'block';
+                    imagePreview.src = e.target.result;
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                imagePreview.style.display = 'none';
+            }
+        }
+        //Pop up pour photo de profil
+        var profileImage = document.getElementById("profile-image");
+        var popup = document.getElementById("popup");
+    
+        profileImage.addEventListener("mouseover", function() {
+          popup.style.display = "block";
+        });
+    
+        profileImage.addEventListener("click", function() {
+          popup.style.display = "block";
+        });
+    
+        popup.addEventListener("click", function(event) {
+          event.stopPropagation();
+          popup.style.display = "none";
+        });
+    
+        document.addEventListener("click", function() {
+          popup.style.display = "none";
+
+        });
+
+
+         //Modifier Mot de passe:
+
+         var changePassword = document.getElementById("changePassword");
+        var modifierMotDePassecontainer = document.getElementById("modifierMotDePassecontainer");
+
+        changePassword.addEventListener("click",function(){
+            
+            event.stopPropagation();
+            event.preventDefault();
+            modifierMotDePassecontainer.style.display = "block";
+
+        });
+
+        document.addEventListener("click",function(event){
+            if(event.target !==modifierMotDePassecontainer && !modifierMotDePassecontainer.contains(event.target)){
+            
+                modifierMotDePassecontainer.style.display="none";
+            }
+
+        });
+    </script>
+</body>
+</html>

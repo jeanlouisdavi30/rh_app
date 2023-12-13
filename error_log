@@ -1,0 +1,82 @@
+[[12-Sep-2021 19:16:22 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/enartsht/public_html/musomobil/exam_php_sem1.php on line 105
+[12-Sep-2021 19:16:32 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/enartsht/public_html/musomobil/exam_php_sem1.php on line 105
+[12-Sep-2021 19:16:52 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/enartsht/public_html/musomobil/exam_php_sem1.php on line 105
+[12-Sep-2021 19:16:59 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/enartsht/public_html/musomobil/exam_php_sem1.php on line 105
+[12-Sep-2021 19:17:10 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/enartsht/public_html/musomobil/exam_php_sem1.php on line 105
+[12-Sep-2021 19:17:12 America/Boise] PHP Warning:  Invalid argument supplied for foreach() in /home3/enartsht/public_html/musomobil/exam_php_sem1.php on line 105
+[21-Oct-2022 18:51:42 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/enartsht/public_html/musomobil/includes/form_handlers/login_handler.php on line 15
+[21-Oct-2022 18:51:43 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/enartsht/public_html/musomobil/includes/form_handlers/login_handler.php on line 15
+[21-Oct-2022 18:51:43 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/enartsht/public_html/musomobil/includes/form_handlers/login_handler.php on line 15
+[21-Oct-2022 18:51:44 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/enartsht/public_html/musomobil/includes/form_handlers/login_handler.php on line 15
+[21-Oct-2022 18:51:46 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/enartsht/public_html/musomobil/includes/form_handlers/login_handler.php on line 15
+[21-Oct-2022 18:51:46 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/enartsht/public_html/musomobil/includes/form_handlers/login_handler.php on line 15
+[21-Oct-2022 18:51:47 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/enartsht/public_html/musomobil/includes/form_handlers/login_handler.php on line 15
+[21-Oct-2022 18:51:47 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home3/enartsht/public_html/musomobil/includes/form_handlers/login_handler.php on line 15
+[12-Jan-2023 08:02:35 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[12-Jan-2023 08:02:35 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[12-Jan-2023 08:02:35 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[12-Jan-2023 10:13:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[12-Jan-2023 10:13:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[12-Jan-2023 10:13:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[12-Jan-2023 10:16:51 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[12-Jan-2023 10:16:51 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[12-Jan-2023 10:16:51 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[12-Jan-2023 10:24:48 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[12-Jan-2023 10:24:48 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[12-Jan-2023 10:24:48 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[12-Jan-2023 10:28:48 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[12-Jan-2023 10:28:48 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[12-Jan-2023 10:28:48 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[12-Jan-2023 10:33:29 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[12-Jan-2023 10:33:29 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[12-Jan-2023 10:33:29 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[12-Jan-2023 11:01:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[12-Jan-2023 11:01:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[12-Jan-2023 11:01:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[12-Jan-2023 11:03:19 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[12-Jan-2023 11:03:19 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[12-Jan-2023 11:03:19 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[12-Jan-2023 11:44:34 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[12-Jan-2023 11:44:34 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[12-Jan-2023 11:44:34 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[12-Jan-2023 12:55:38 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[12-Jan-2023 12:55:38 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[12-Jan-2023 12:55:38 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[12-Jan-2023 18:16:46 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[12-Jan-2023 18:16:46 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[12-Jan-2023 18:16:46 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[15-Jan-2023 09:56:57 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[15-Jan-2023 09:56:57 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[15-Jan-2023 09:56:57 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[15-Jan-2023 09:59:58 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[15-Jan-2023 09:59:58 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[15-Jan-2023 09:59:58 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[16-Jan-2023 00:33:31 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[16-Jan-2023 00:33:31 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[16-Jan-2023 00:33:31 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[16-Jan-2023 00:39:10 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[16-Jan-2023 00:39:10 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[16-Jan-2023 00:39:10 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[16-Jan-2023 01:16:39 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[16-Jan-2023 01:16:39 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[16-Jan-2023 01:16:39 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[16-Jan-2023 01:18:56 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[16-Jan-2023 01:18:56 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[16-Jan-2023 01:18:56 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[08-Jun-2023 14:30:53 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home3/enartsht/public_html/musomobil/config/config.php on line 6
+[08-Jun-2023 14:30:53 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home3/enartsht/public_html/musomobil/index.php on line 6
+[08-Jun-2023 14:30:53 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home3/enartsht/public_html/musomobil/index.php on line 7
+[08-Jun-2023 14:30:53 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home3/enartsht/public_html/musomobil/index.php on line 9
+[08-Jun-2023 14:30:53 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home3/enartsht/public_html/musomobil/index.php on line 10
+[19-Jun-2023 19:56:46 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[19-Jun-2023 19:56:46 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[19-Jun-2023 19:56:46 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[19-Jun-2023 19:57:01 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[19-Jun-2023 19:57:01 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[19-Jun-2023 19:57:01 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[19-Jun-2023 21:53:55 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[19-Jun-2023 21:53:55 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[19-Jun-2023 21:53:55 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114
+[28-Aug-2023 18:09:11 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 112
+[28-Aug-2023 18:09:11 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 113
+[28-Aug-2023 18:09:11 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home3/enartsht/public_html/musomobil/changepass.php on line 114

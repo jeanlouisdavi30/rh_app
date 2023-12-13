@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilePage</title>
+    <!-- Inclure Bootstrap 4 CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <!-- Entête -->
+    <div class="header">
+        <img src="images/logo.png" alt="Logo FOKAL" class="logo">
+        <ul class="menu">
+            <li><a href="#">.Informations personnelles</a></li>
+            <li><a href="#">.Mes Fichiers</a></li>
+            <li><a href="#">.Matériel</a></li>
+            <li><a href="#" id="changePassword">.Changer mot de passe</a></li>
+        </ul>
+        <div class="profile-image-container">
+            <img src="images/image1.jpg" alt="profile-image" class="profile-image" id="profile-image">
+            <div class="popup" id="popup">
+                <a href="login.html">Déconnexion</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Formulaire à afficher lors du clic sur le lien "Changer le mot de passe"-->
+    <div id="modifierMotDePasseContainer" class="hidden">
+        <form id="modifierMotDePasseForm">
+          <div class="form-group">
+            <label for="motDepasseActuel">Saisissez votre mot de passe actuel:</label>
+            <input type="password" class="form-control" id="motDepasseActuel" name="motDepasseActuel" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="nouveauMotDePasse">Saisissez votre nouveau mot de passe:</label>
+            <input type="password" class="form-control" id="nouveauMotDePasse" name="nouveauMotDePasse" required>
+          </div>
+
+          <div class="form-group">
+            <label for="nouveauMotDePasseConfirmation">Confirmez votre nouveau mot de passe:</label>
+            <input type="password" class="form-control" id="nouveauMotDePasseConfirmation" name="nouveauMotDePasseConfirmation" required>
+          </div>
+      
+          <div class="text-center">
+            <button type="submit" class="btn btn-outline-warning btn-sm">Changer le mot de passe</button>
+          </div>
+        </form>
+    </div>
+
+    <!-- Section 1 - Mes Fichiers -->
+    <div class="containers mt-4 container-sections">
+        
+            <h2 class="titres">Mes Fichiers</h2>
+        
+        <form class="form1">
+            <div class="form-group">
+                <label for="fileUpload">Téléverser un fichier:</label>
+                <input type="file" class="form-control-file" id="fileUpload">
+            </div>
+            <div class="form-group">
+                <label for="fileDescription">Description:</label>
+                <input type="text" class="form-control description-input" id="fileDescription">
+            </div>
+            <button type="submit" class="btn btn-warning btn-sm" id="validerFichier">Valider</button>
+        </form>
+    </div>
+
+    <!-- Section 2 - Liste des Fichiers -->
+    <div class="containers mt-4 container-sections">
+        <h2 class="titres">Fichiers téléversés</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nom du fichier</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ligne 1 (Exemple fictif) -->
+                <tr>
+                    <td>Fichier1.pdf</td>
+                    <td>Description du fichier 1</td>
+                    <td>2023-10-04</td>
+                    <td><button class="btn btn-danger btn-sm supprimerFichier">Supprimer</button></td>
+                </tr>
+                <!-- Ligne 2 (Exemple fictif) -->
+                <tr>
+                    <td>Fichier2.jpg</td>
+                    <td>Description du fichier 2</td>
+                    <td>2023-10-03</td>
+                    <td><button class="btn btn-danger btn-sm supprimerFichier">Supprimer</button></td>
+                </tr>
+                <!-- Ligne 3 (Exemple fictif) -->
+                <tr>
+                    <td>Fichier3.txt</td>
+                    <td>Description du fichier 3</td>
+                    <td>2023-10-02</td>
+                    <td><button class="btn btn-danger btn-sm supprimerFichier">Supprimer</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--Popup à afficher lors d'un clic sur un bouton "Supprimer"-->
+    <div class="popupSuppressionFichier" id="popupSuppressionFichier">
+        <p>Voulez-vous vraiment supprimer ce fichier?</p>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-danger btn-sm">OUI</button>
+            <button type="submit" class="btn btn-outline-warning btn-sm">NON</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="containerFooter">
+            <div class="text-center">
+                <p>Copyright © 2023 FOKAL. | Design by: <a href="mailto:informatique@fokal.org">informatique@fokal.org</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!--Inclure Bootstrap 4 et JavaScript-->
+    <!--Ce lien popper JS est mieux que le 2eme en commentaire(génère des erreurs de chargement à la console)-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        //Pop up pour photo de profil
+        var profileImage = document.getElementById("profile-image");
+        var popup = document.getElementById("popup");
+
+        profileImage.addEventListener("mouseover", function() {
+            popup.style.display = "block";
+        });
+
+        profileImage.addEventListener("click", function() {
+            popup.style.display = "block";
+        });
+
+        popup.addEventListener("click", function(event) {
+            event.stopPropagation();
+            popup.style.display = "none";
+        });
+
+        document.addEventListener("click", function() {
+            popup.style.display = "none";
+        });
+
+        //Modifier Mot de passe:
+
+        var changePassword = document.getElementById("changePassword");
+        var modifierMotDePasseContainer = document.getElementById("modifierMotDePasseContainer");
+
+        changePassword.addEventListener("click",function(){
+            
+            event.stopPropagation();
+            event.preventDefault();
+            modifierMotDePasseContainer.style.display = "block";
+
+        });
+
+        document.addEventListener("click",function(event){
+            if(event.target !==modifierMotDePasseContainer && !modifierMotDePasseContainer.contains(event.target)){
+            
+                modifierMotDePasseContainer.style.display="none";
+            }
+
+        });
+
+        //Supprimer un fichier:
+
+        var supprimerFichierBtns = document.getElementsByClassName("supprimerFichier"); 
+        var popupSuppressionFichier = document.getElementById("popupSuppressionFichier");
+
+        for (var i = 0; i < supprimerFichierBtns.length; i++) {
+
+            var supprimerFichierBtn = supprimerFichierBtns[i];
+
+            // Ajouter un gestionnaire d'événement de clic sur chaque bouton
+            supprimerFichierBtn.addEventListener("click", function() {
+                event.stopPropagation();
+                popupSuppressionFichier.style.display = "block";
+                //console.log("Code JavaScript chargé");
+            });
+
+        }
+
+
+        //Gestionnaire d'événement de clic au document pour cacher le formulaire lors d'un clic à l'extérieur
+        document.addEventListener("click", function(event) {
+            if (event.target !== popupSuppressionFichier && !popupSuppressionFichier.contains(event.target)) {
+                popupSuppressionFichier.style.display = "none";
+                
+            }
+        });
+    </script>
+</body>
+</html>

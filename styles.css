@@ -1,0 +1,680 @@
+
+
+/*Entête*/
+
+/*Style du popup pour modifier le mot de passe*/
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#modifierMotDePassecontainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #aaa;
+    width: 25%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: #fff;
+    padding: 10px 20px;
+}
+.logo {
+    max-width: 80px; /* Limiter la largeur de l'image du logo */
+}
+.menu {
+    list-style: none;
+    display: flex;
+}
+.menu li a {
+    margin-right: 200px;
+    color: #f25f29;
+    font-weight: bold;
+}
+.profile-image {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f25f29;
+}
+
+
+.popup {
+    display: none;
+    position: absolute; 
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+    box-shadow: 0px 0px 5px #aaa;
+    top: 100%; 
+    right: 0; 
+}
+.popup a {
+    color: #f25f29;
+}
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+}
+.profile-image-container:hover .popup {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+    .menu li a {
+        margin-right: 0; /* Supprimez la marge pour aligner les liens verticalement */
+        margin-bottom: 10px; /* Ajoutez un espacement entre les liens */
+    }
+    .profile-image-container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+
+
+/*Corps*/
+body {
+    background-color: #f4f4f4;
+}
+
+/*Pied de page*/
+footer {
+    background-color: #f25f29;
+    padding: 20px 0; 
+    margin-top:100%;
+    margin-top: auto;
+    margin-bottom: 0px;
+}
+
+/* Style du texte dans le pied de page */
+footer p {
+    color: #fff;
+    margin: 0;
+    font-size: 14px;
+}
+footer a{
+    color: #f4f4f4;
+}
+
+/*Style pour les éléments cachés*/
+
+.hidden{
+    display: none;
+}
+
+/*Styles de la page login*/
+
+.loginBodyPage {
+    background-image: url('images/couverture.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+/*Styles de la page register*/
+
+.registerBodyPage {
+    background-image: url('images/couverture.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.registration-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);    
+}
+
+ /* Classe pour des champs de saisie plus petits */
+ .small-input {
+    width: 100%;
+    max-width: 300px;
+}
+
+/*Login et Register*/
+
+.card{
+            
+    background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+.card-header {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: darkorange;
+    border: none;
+    max-width: 150px;
+}
+
+
+.btn-primary:hover {
+    background-color: orange;
+}
+form label{
+    color: black;
+}
+
+.conteneurs{
+    width: 75%;
+    height: 75%;
+}
+
+/*Styles pour la page formulaire*/
+
+ 
+
+
+.containerFormPage {
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 2px solid #f25f29;
+    padding:0;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+    
+}
+.containerFormPage .form-group {
+    margin-bottom: 20px;
+}
+.containerFormPage form{
+    
+    padding: 100px;
+}
+
+#imagePreview {
+    max-width: 30%;
+    margin-top: 30px;
+}
+.formulaireTitle{
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+    background-color:#f25f29;
+    text-align: center;
+    width:100%;
+}
+
+
+
+/*Styles pour la page de profil*/
+
+
+
+
+.containerProfilPage {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.image-content div {
+    display: flex;
+    max-width: 30%;
+    /*margin-right: 15%;*/
+    height:auto;
+    margin-bottom: 5%;
+    margin-top: 0px;
+    margin-left:-80%;
+    
+
+}
+
+.image-content div img {
+    margin-bottom: 5%;
+    width: 200px;
+    
+}
+
+.uploadImg{
+    margin-left:65%;
+}
+
+
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+    background-color: #f25f29;
+    text-align: center;
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+
+.modifierDependant, .supprimerDependant{
+    display: inline-block;  
+    
+}
+
+.btnSec2{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+#ajouterDependant{
+    margin-bottom: 5px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.tableProfilPage td{
+    width: 300px;
+}
+
+
+
+.tableProfilPage{
+    margin-left: 50px;
+}
+
+.sec2 .dependant{
+    margin-bottom: 30px;
+
+}
+
+
+.modifierSec1{
+    margin-top: 50px;
+    margin-left:50px;
+    margin-bottom: 20px;
+}
+#modifierSec3{
+    margin-top: 50px;
+    margin-left:50px;
+    margin-bottom: 20px;
+}
+#modifierSec4{
+    margin-top: 50px;
+    margin-left:50px;
+    margin-bottom: 20px;
+}
+
+.sec3 button{
+    margin-top: 40px;
+}
+.sec4 button{
+    margin-top: 40px;
+}
+
+.section-box {
+    border: 2px solid #f25f29;
+    padding: 0px;
+    margin: 50px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    
+}
+
+.sec3 table{
+    margin-bottom: 40px;
+}
+
+
+#formContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #aaa;
+    width: 25%;
+}
+#sec4FormContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #aaa;
+    width: 25%;
+
+}
+ 
+#modifierDependantContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #aaa;
+    width: 25%;
+}
+
+.popupSuppressionDependant{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #aaa;
+    width: 25%;
+}
+
+
+/*Styles pour la page fichier*/
+
+
+/* Styles pour les sections(1-2), containers et titres */
+/*Pages : File,LogistiqueAdmin,LogistiqueUser*/
+
+.container-sections {
+    background-color: #fff;
+    padding: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #aaa;
+}
+.titres{
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+    background-color: #f25f29;
+    text-align: center;
+}
+
+
+
+.containers{
+    border: 2px solid #f25f29;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+.form1{
+    margin-left: 50px;
+}
+.description-input {
+    width: 400px;
+}
+
+#validerFichier{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+.popupSuppressionFichier{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #aaa;
+    width: 25%;
+}
+
+
+/*Style pour la page logistiqueAdmin*/
+
+
+#nouvelEmprunt{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#formContainerNouvelEmprunt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #aaa;
+    width: 25%;
+}
+#formContainerModifierEmprunt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #aaa;
+    width: 25%;
+}
+
+.popupSuppressionMateriel{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #aaa;
+    width: 25%;
+}
+
+/*Styles pour la page logistiqueUser*/
+
+
+#demandeMaterielBtn{
+    margin-top: 5%;
+}
+
+#containerVoirMateriel{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #aaa;
+    width: 25%;
+
+}
+
+/*Style pour la page VoirUnEmprunt*/
+
+
+
+
+
+/* Styles pour Section 1 - Materiels */
+.container-section-1 {
+    background-color: #fff;
+    padding: 90px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #aaa;
+}
+.titre1{
+    
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 80px;
+   
+    text-align: center;
+}
+
+.titre2{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 80px;
+   
+    text-align: center;
+}
+
+
+
+.container{
+    
+    border: 2px solid #f25f29;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    
+}
+
+
+
+
+
+
+
+.attribut {
+    float: left;
+    clear: left;
+    width: 155px; 
+    
+}
+
+.valeur {
+    margin-left: 155px; 
+}
+
+
+/*.signature-line {
+    width: 25%; 
+    margin-left: 90%; 
+    border: 1px solid #000; 
+}*/
+
+
+
+
+.signature{
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 30px; 
+}
+
+
+
+
+#printButton{
+    margin-top: 2%;
+}
+
+.separator{
+
+    
+    margin-top: 5%;
+    text-align: center;
+
+    
+
+   
+    
+
+}
+
+.retour{
+    margin-top: 10%;
+}
+
+.signature p{
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+#modifierMotDePasseContainer{
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #908c8c;
+    width: 25%;
+}
+
+tr.border-bottom td {
+    border-bottom: 1pt solid #f25f29;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
